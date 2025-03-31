@@ -35,7 +35,7 @@ def make_base_centroids(out_file_path, bounds=(-180, -60, 180, 60), res_land_arc
     # Create land centroids
     if litpop_aligned:
         cent_land = Centroids.from_pnt_bounds(
-            (-180 + res_land / 2, -90 + res_land / 2, 180 - res_land / 2, 90 - res_land / 2), res_land
+            (-180 + res_land / 2, bounds[1] + res_land / 2, 180 - res_land / 2, bounds[3] - res_land / 2), res_land
         )
     else:
         cent_land = Centroids.from_pnt_bounds(bounds, res_land)
@@ -91,6 +91,7 @@ if __name__ == "__main__":
         out_file = os.path.join(out_dir, file_name)
 
         bounds = (-180, -90, 180, 90) if variant["include_poles"] else (-180, -60, 180, 60)
+        print(bounds)
         make_base_centroids(out_file, bounds=bounds, litpop_aligned=variant["litpop_aligned"])
 
         print(f"✓ Created: {file_name}")

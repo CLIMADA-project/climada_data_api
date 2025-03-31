@@ -11,7 +11,7 @@ It automatically creates **four versions** of the centroid grid:
 
 ---
 
-## ✅ What It Does
+## What It Does
 
 - Creates centroids over a specified geographic bounding box.
 - Uses:
@@ -27,21 +27,11 @@ It automatically creates **four versions** of the centroid grid:
 
 ---
 
-## 💡 LitPop Alignment
+## LitPop Alignment
 
 When `litpop_aligned=True`, land centroids are aligned with the **LitPop grid**. This means grid cells are centered (e.g., 0.02083°, 0.0625°, etc.) rather than beginning at 0°.  
-Useful for compatibility with the standard litpop grid, as well as the river flood hazard data
+Useful for compatibility with the default litpop grid
 
----
-
-## 📁 Output Files
-
-All files are saved to the `centroids/` folder in your `DATA_DIR`, and include the date in the filename. Example outputs:
-
-- `earth_centroids_150asland_1800asoceans_distcoast_region_nopoles_litpop_aligned_20250330.hdf5`
-- `earth_centroids_150asland_1800asoceans_distcoast_region_litpop_aligned_20250330.hdf5`
-- `earth_centroids_150asland_1800asoceans_distcoast_region_nopoles_20250330.hdf5`
-- `earth_centroids_150asland_1800asoceans_distcoast_region_20250330.hdf5`
 
 ---
 
